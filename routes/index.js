@@ -25,7 +25,7 @@ router.post('/sign', function(req, res, next) {
             return callGeth({
                     "jsonrpc": "2.0",
                     "method": "personal_sendTransaction",
-                    "params": [{from: config.account_address, to: config.contract_address, data: signature, value: '0x1BC16D674EC80000'}, config.account_address],
+                    "params": [{ from: config.account_address, to: config.contract_address, data: signature }, config.account_password],
                     "id": 1
                 })
         })
